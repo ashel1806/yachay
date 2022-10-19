@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <h1 className="text-3xl font-bold underline text-green-300">
-      Hello from Docker!
-    </h1>
-  );
+  return <h1 className="text-3xl font-bold underline">Hello from Docker!</h1>;
 }
