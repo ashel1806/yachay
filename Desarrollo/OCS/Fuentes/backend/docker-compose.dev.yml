@@ -1,20 +1,6 @@
 version: '3.9'
 
 services:
-  api:
-    image: yachay-backend-dev
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    container_name: yachay-backend-dev
-    ports:
-      - 3001:3000
-    depends_on:
-      - database
-
   database:
     image: mysql
     container_name: yachay-db
@@ -28,3 +14,18 @@ services:
     volumes:
       - ./database:/docker-entrypoint-initdb.d
       - ./database/data:/var/lib/mysql
+
+  api:
+    image: yachay-backend-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: yachay-backend-dev
+    ports:
+      - 3001:3000
+    depends_on:
+      - database
+    command: bash -c 'while !</dev/tcp/database/3306; do sleep 1; done; yarn dev'
