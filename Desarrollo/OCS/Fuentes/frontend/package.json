@@ -15,7 +15,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "commit": "commit"
+    "commit": "yarn run lint && commit"
   },
   "dependencies": {
     "next": "12.3.1",
