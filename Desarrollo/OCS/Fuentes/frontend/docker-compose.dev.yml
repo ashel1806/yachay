@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  app:
+    image: yachay-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+    container_name: 'yachay-frontend'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 3000:3000
