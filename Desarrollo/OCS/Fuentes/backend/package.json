@@ -14,7 +14,7 @@
     "dev": "node index.js",
     "prettier": "prettier --write .",
     "lint": "eslint .",
-    "commit": "commit"
+    "commit": "yarn run lint && commit"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
