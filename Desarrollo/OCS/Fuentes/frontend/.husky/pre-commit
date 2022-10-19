@@ -3,5 +3,3 @@
 
 cd Desarrollo/OCS/Fuentes/frontend
 yarn lint
-
-exit 1
