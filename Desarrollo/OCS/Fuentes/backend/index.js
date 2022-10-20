@@ -4,14 +4,16 @@ const { connectToDatabase } = require('./src/configs/database.config');
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
 const start = async () => {
   await connectToDatabase();
-  app.listen(3001, () => {
-    console.log(`Server running on port ${3001}`);
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
   });
 };
 
