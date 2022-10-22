@@ -1,8 +1,8 @@
 const { sequelize } = require('../configs/database.config');
 const User = require('./User');
 
-sequelize.sync({ alter: true }).then(() => {
-  console.log('Database & tables created!');
+sequelize.sync({ force: true }).then(() => {
+  console.log('Databases dropped & tables created!');
 });
 
 module.exports = {
