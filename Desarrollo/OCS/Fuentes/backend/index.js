@@ -3,13 +3,15 @@ require('dotenv').config();
 
 const { connectToDatabase } = require('./src/configs/database.config');
 
+const { authRoute } = require('./src/routes');
+
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World from Docker Compose!');
-});
+app.use(express.json());
+
+app.use('/auth', authRoute);
 
 const start = async () => {
   await connectToDatabase();
