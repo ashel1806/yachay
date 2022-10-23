@@ -5,7 +5,7 @@ const { asyncHandler } = require('../middlewares');
 const { User } = require('../models');
 
 // eslint-disable-next-line no-unused-vars
-const register = asyncHandler(async (req, res, next) => {
+const signup = asyncHandler(async (req, res, next) => {
   const user = await User.create(req.body);
 
   const salt = await bcrypt.genSalt(10);
@@ -74,4 +74,4 @@ const me = async (req, res) => {
   });
 };
 
-module.exports = { register, login, me };
+module.exports = { signup, login, me };
