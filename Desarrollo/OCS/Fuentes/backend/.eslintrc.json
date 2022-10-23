@@ -11,6 +11,8 @@
   },
   "rules": {
     "no-console": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "no-useless-catch": "off",
+    "implicit-arrow-linebreak": "off"
   }
 }

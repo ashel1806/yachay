@@ -3,13 +3,19 @@ require('dotenv').config();
 
 const { connectToDatabase } = require('./src/configs/database.config');
 
-const PORT = process.env.PORT || 3001;
+const { authRoute } = require('./src/routes');
+
+const { errorHandler } = require('./src/middlewares');
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(express.json());
+
+app.use('/api/auth', authRoute);
+
+app.use(errorHandler);
 
 const start = async () => {
   await connectToDatabase();
