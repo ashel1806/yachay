@@ -20,7 +20,7 @@ export default function descriptioncourse() {
             </div>
             <div className="col-span-2 text-lg text-gray-400 pl-6 py-3">
               Aprende todo sobre dibujo vectorial con Illustrator y sé un experto:
-              de dibujos simples a gráficos complejos y avanzados
+              de dibujos  simples a gráficos complejos y avanzados
             </div>
             <div className="text-sm pl-6 pt-3">
               <ul>
