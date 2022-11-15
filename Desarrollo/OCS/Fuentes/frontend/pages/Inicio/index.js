@@ -8,7 +8,6 @@ import popularesdata from "../../utils/popularesdata";
 
 
 
-
 export default function Inicio() {
   return (
     <div>
