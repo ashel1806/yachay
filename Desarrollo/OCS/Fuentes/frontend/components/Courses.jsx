@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
-import { AiOutlineHeart } from "react-icons/ai"
 
-export default function Favorites({popular}) {
+export default function Courses({popular}) {
   return (
-    <div className='card py-6 px-6 '>
+    <div className='card py-4 px-4 '>
         
         <Link href={`/popular/${popular.slug}`}> 
         <a>
@@ -16,7 +15,7 @@ export default function Favorites({popular}) {
         </a>
         </Link>
 
-        <div className='flex flex-col items-center justify-center font-semibold'>
+        <div className='flex flex-col items-start justify-center font-semibold'>
             <Link href={`/popular/${popular.slug}`}>
                 <a>
                     <h2 className='text-lg'>{popular.course}</h2>
@@ -31,11 +30,8 @@ export default function Favorites({popular}) {
                 width={50}
                 height={50}
             />
-            <p className='my-4'>{popular.teacher}</p>
-                <div className='flex my-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 rounded-md group cursor-pointer hover:shadow-lg m-auto font-semibold text-left'>
-                <AiOutlineHeart className="text-2xl text-gray-600 group-hover:text-gray-400 " />
-                <p className='text-2xl text-gray-600 group-hover:text-gray-400'>{popular.favorites}</p>
-                </div>
+            <p className='my-4 ml-1'>{popular.teacher}</p>
+                
             </div>
             
            
