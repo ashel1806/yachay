@@ -8,7 +8,7 @@ const popularesdata={
             favorites:"24.5k"
         },
         {
-            course:"Algebra Lineal desde cero hasta avanzado",
+            course:"Algebra Lineal desde cero hasta avanzado más",
             courseimg:"/images/algebra.jpg",
             teacher:"Ashel Vasquez Paloma",
             teacherimg:"/images/Ashel.png",
