@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import { BsPeople, BsShieldCheck } from "react-icons/bs"
+import { GrDocumentText } from "react-icons/gr"
 
 export default function Courses({popular}) {
   return (
@@ -33,8 +35,36 @@ export default function Courses({popular}) {
             <p className='my-4 ml-1'>{popular.teacher}</p>
                 
             </div>
+
+            <div className='flex ml-7 my-3 items-center grid-cols-3 gap-5' >
+                <div className='flex mx-3 my-3 justify-start items-center grid-cols-3 gap-3'>
+                    <GrDocumentText className="text-2xl text-gray-600"/>
+                    <p className='text-gray-600'>{popular.doc}</p>
+                    <p className='text-gray-600 md:grid-cols-3'> | </p>
+                </div>
+
+                <div className='flex mx-3 my-3 justify-start items-center grid-cols-3 gap-3'>
+                    <BsShieldCheck className="text-2xl text-gray-600"/>
+                    <p className='text-gray-600'>{popular.validacion}</p>
+                    <p className='text-gray-600 md:grid-cols-3 ml-4'> | </p>
+                </div>
+                <div className='flex mx-3 my-3 justify-start items-center grid-cols-3 gap-3'>
+                    <BsPeople className="text-2xl text-gray-600"/>
+                    <p className='text-gray-600'>{popular.alumnos}</p>
+                </div>
+
+            </div>
+
+            <div className='w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700'>
+                <div className='bg-blue-600 h-2.5 '>
+                </div>
+            </div>
+
+            <p className='mt-3 text-gray-600'>Progreso:{popular.progress}</p>
+
+
+                
             
-           
         </div>
     </div>
   )
