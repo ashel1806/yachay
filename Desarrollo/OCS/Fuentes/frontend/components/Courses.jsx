@@ -1,7 +1,8 @@
-import Link from 'next/link'
-import React from 'react'
-import { BsPeople, BsShieldCheck } from "react-icons/bs"
-import { GrDocumentText } from "react-icons/gr"
+import { Progress } from "@material-tailwind/react";
+import Link from 'next/link';
+import React from 'react';
+import { BsPeople, BsShieldCheck } from "react-icons/bs";
+import { GrDocumentText } from "react-icons/gr";
 
 export default function Courses({popular}) {
   return (
@@ -55,11 +56,9 @@ export default function Courses({popular}) {
 
             </div>
 
-            <div className='w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700'>
-                <div className='bg-blue-600 h-2.5 '>
-                </div>
+            <div className='w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700'>
+            <Progress className="rounded-full" value={popular.progreso} label="Completedo" />
             </div>
-
             <p className='mt-3 text-gray-600'>Progreso:{popular.progress}</p>
 
 

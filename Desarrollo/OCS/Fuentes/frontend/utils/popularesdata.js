@@ -9,7 +9,8 @@ const popularesdata={
             doc:"24",
             validacion:"9",
             alumnos:"10",
-            progress:"45%"
+            progress:"45%",
+            progreso:"45"
         },
         {
             course:"Algebra Lineal desde cero hasta avanzado más",
@@ -20,7 +21,8 @@ const popularesdata={
             doc:"24",
             validacion:"9",
             alumnos:"10",
-            progress:"75%"
+            progress:"75%",
+            progreso:"75"
         },
         {
             course:"Adobe Ilustrator desde cero hasta nivel avanzado",
@@ -31,7 +33,8 @@ const popularesdata={
             doc:"24",
             validacion:"9",
             alumnos:"10",
-            progress:"65%"
+            progress:"65%",
+            progreso:"65"
         },
         {
             course:"Blender desde cero hasta convertirte en master",
@@ -42,7 +45,8 @@ const popularesdata={
             doc:"24",
             validacion:"9",
             alumnos:"10",
-            progress:"25%"
+            progress:"25%",
+            progreso:"25"
         }
         
     ],
