@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import SearchBar from "../components/Searchbar";
 import React from 'react';
-import Navbar from '../components/Navbar';
-import SearchBar from "../components/Searchbar";
+
 
 
 
