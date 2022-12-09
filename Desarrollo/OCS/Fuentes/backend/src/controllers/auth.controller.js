@@ -2,18 +2,22 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const { asyncHandler } = require('../middlewares');
-const { User } = require('../models');
+const { User, UserDetails, UserType } = require('../models');
 
 // eslint-disable-next-line no-unused-vars
 const signup = asyncHandler(async (req, res, next) => {
-  const user = await User.create(req.body);
+  const { info, details, role } = req.body;
+
+  const user = await User.create(info);
+  const userDetails = await UserDetails.create({ id_user: user.idUser, lastName: details.lastName });
+  const userType = await UserType.create({ id_user: user.idUser, roleName: role });
 
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
 
   await user.save();
-
-  console.log('the new user is: ', user.toJSON());
+  await userDetails.save();
+  await userType.save();
 
   const payload = {
     user: {
@@ -64,14 +68,4 @@ const login = async (req, res, next) => {
   });
 };
 
-const me = async (req, res) => {
-  console.log(req.user);
-  const user = await User.findByPk(req.user.idUser);
-
-  return res.status(200).json({
-    status: 'ok',
-    data: user,
-  });
-};
-
-module.exports = { signup, login, me };
+module.exports = { signup, login };

@@ -1,5 +1,5 @@
-node_modules
-.gitignore
-.dockerignore
-README.md
 database
+.gitignore
+README.md
+requests
+node_modules
