@@ -10,8 +10,8 @@
     "npm": "please-use-yarn"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon -L index.js",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon -L index.js",
     "prettier": "prettier --write .",
     "lint": "eslint .",
     "commit": "yarn run lint && commit"
@@ -22,6 +22,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
+    "node-sass": "^8.0.0",
     "sequelize": "^6.25.2"
   },
   "devDependencies": {

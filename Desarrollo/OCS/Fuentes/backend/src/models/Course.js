@@ -1,26 +1,35 @@
 const { DataTypes, Model } = require('sequelize');
 const { sequelize } = require('../configs/database.config');
 
-class Student extends Model {}
-Student.init(
+class Course extends Model {}
+Course.init(
   {
-    idUser: {
+    idCourse: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
     },
-    nickname: {
+    idTeacher: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    banner: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
   {
     sequelize,
-    tableName: 'estudiante',
+    tableName: 'curso',
     timestamps: false,
-    modelName: 'Student',
+    modelName: 'Course',
     underscored: true,
   }
 );
 
-module.exports = Student;
+module.exports = Course;

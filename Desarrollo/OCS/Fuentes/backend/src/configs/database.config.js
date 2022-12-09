@@ -1,7 +1,14 @@
 const { Sequelize } = require('sequelize');
 
+const projectDirectory = process.cwd();
+const envFilePath = `${projectDirectory}/.env.${process.env.NODE_ENV}`;
+
+require('dotenv').config({ path: envFilePath });
+
+const { MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD } = process.env;
+
 const sequelize = new Sequelize(
-  'mysql://yachay-admin:yachay-password@database:3306/onlycourses'
+  `mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@database:3306/${MYSQL_DATABASE}`
 );
 
 const connectToDatabase = async () => {

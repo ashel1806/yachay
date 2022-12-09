@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const { connectToDatabase } = require('./src/configs/database.config');
 
-const { authRoute } = require('./src/routes');
+const { authRoute, userRoute, courseRoute } = require('./src/routes');
 
 const { errorHandler } = require('./src/middlewares');
 
@@ -14,6 +14,8 @@ const app = express();
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
+app.use('/api/user', userRoute);
+app.use('/api/course', courseRoute);
 
 app.use(errorHandler);
 
