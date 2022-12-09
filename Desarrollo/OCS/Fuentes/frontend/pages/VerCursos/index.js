@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import Courses from "../../components/Courses";
 import Navbar from "../../components/navbar";
@@ -13,6 +14,7 @@ export default function VerCursos() {
     <Head>
       <title>Ayuda| VerCursos</title>
       </Head>
+      <ThemeProvider enableSystem={true} attribute="class">
       <Navbar/>
       <SearchBar/>
         <div className='py-10 pl-72 font-bold text-4xl pt-1000 '>Cursos</div>
@@ -34,6 +36,7 @@ export default function VerCursos() {
                 <Courses popular={popular} key={popular.slug}></Courses>
               ))}
         </div>
+        </ThemeProvider>
       </div>
       
   )

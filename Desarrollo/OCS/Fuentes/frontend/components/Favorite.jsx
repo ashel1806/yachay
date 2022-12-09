@@ -15,7 +15,6 @@ export default function Favorites({popular}) {
             />
         </a>
         </Link>
-
         <div className='flex flex-col items-center justify-center font-semibold'>
             <Link href={`/popular/${popular.slug}`}>
                 <a>

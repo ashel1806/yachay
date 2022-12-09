@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import Image from 'next/image';
 import React from 'react';
 import Navbar from '../components/Navbar';
@@ -6,18 +7,19 @@ import SearchBar from "../components/Searchbar";
 export default function descriptioncourse() {
     return ( 
         <div>
+            <ThemeProvider enableSystem={true} attribute="class">
             <div>
             <Navbar/>
             </div>
             <div>
             <SearchBar/>
             </div>
-            <div className="flex flex-col container mx-auto h-screen items-center justify-center bg-gray-100">
+            <div className="flex flex-col container mx-auto h-screen items-center justify-center bg-gray-100 dark:bg-slate-800">
 
-                <div className="grid grid-rows-2 ml-10 mt-20">
+                <div className="grid grid-rows-2 ml-10 mt-28">
                     
                     <div>
-                        <div className="text-3xl mb-7 ">
+                        <div className="text-3xl mb-6 ">
                             Mi perfil
                         </div>
                         <div className="flex flex-row ">
@@ -27,8 +29,8 @@ export default function descriptioncourse() {
                                         <Image src="/images/fotoperfil.png" width={250} height={250} className="rounded-full"/>
                                     </div>
                                     <div className="flex flex-col container items-center justify-center">
-                                        <button className="bg-white rounded-2xl text-2xl py-3 px-20  mt-5 mb-2.5 mr-20 ml-5 border border-blue-500" > Cambiar foto</button>
-                                        <button className="bg-white rounded-2xl text-2xl py-3 px-20 mb-3 mr-20 ml-5 border border-blue-500"> Eliminar foto</button>
+                                        <button className="bg-white rounded-2xl text-2xl py-3 px-20  mt-5 mb-2.5 mr-20 ml-5 border border-blue-500 dark:bg-gray-600 border-white" > Cambiar foto</button>
+                                        <button className="bg-white rounded-2xl text-2xl py-3 px-20 mb-3 mr-20 ml-5 border border-blue-500 dark:bg-gray-600 border-white"> Eliminar foto</button>
                                     </div>
                                 </div>
                             </div>
@@ -40,17 +42,17 @@ export default function descriptioncourse() {
                                             <div className="flex flex-row mb-4">
                                                 <div className="ml-14 mr-8 text-2xl"> <label for="name"> Nombre : </label></div>
                                                 <div><input id="name" className="pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"></input></div>
-                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500"> Editar </button>
+                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500 dark:bg-gray-600 border-white"> Editar </button>
                                             </div>
                                             <div className="flex flex-row mb-4">
                                                 <div  className="ml-14 mr-8 text-2xl" ><label for="apellido">Apellido :</label></div>
                                                 <div><input id="apellido" className="size-lg pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"></input></div>
-                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500"> Editar </button>
+                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
                                             </div>
                                             <div className="flex flex-row mb-4">
                                                 <div  className="ml-14  mr-8 text-2xl" ><label for="Correo"> Correo   : </label></div>
                                                 <div><input id="Correo" type="email" className="size-md pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"></input></div>
-                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500"> Editar </button>
+                                                <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
                                             </div>
                                         </form>
                                     </div>
@@ -86,11 +88,11 @@ export default function descriptioncourse() {
                                     </div>
 
                                     <div className=" col-span-2 grid grid-rows-5">
-                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500"> Editar </button>
-                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500"> Editar </button>
-                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500"> Editar </button>
-                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500"> Editar </button>
-                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500"> Editar </button>  
+                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
+                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
+                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
+                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
+                                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-8 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>  
                                     </div>    
                                 </div>
                             </div>
@@ -98,7 +100,7 @@ export default function descriptioncourse() {
                             <div className="col-span-1 grid grid-rows-6">
                                 <div className="row-span-1">
                                     <div className="ml-10 text-2xl"> <label for="Facultad"> Descripción: </label>
-                                    <button className="ml-10 bg-white rounded-2xl text-xl py-2 px-10  mb-5 border border-blue-500"> Editar </button>
+                                    <button className="ml-10 bg-white rounded-2xl text-xl py-2 px-10  mb-5 border border-blue-500  dark:bg-gray-600 border-white"> Editar </button>
                                     </div>
                                 </div>
                                 <div className="ml-10 row-span-5">
@@ -110,8 +112,9 @@ export default function descriptioncourse() {
                     </div>
                 </div>
 
-                <button className="bg-sky-500 text-white rounded-2xl text-xl py-3 px-12  mb-5 mr-5 border border-blue-500"> Guardar Cambios </button>
+                <button className="bg-sky-500 text-white rounded-2xl text-xl py-3 px-12  mb-5 mr-5 border border-blue-500  dark:bg-gray-600 border-white"> Guardar Cambios </button>
             </div>
+            </ThemeProvider>
         </div>
         );
     }

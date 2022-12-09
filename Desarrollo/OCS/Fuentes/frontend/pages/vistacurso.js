@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-
-
+import Navbar from "../../components/navbar";
+import SearchBar from "../../components/Searchbar";
 
 
 export default function descriptioncourse() {
