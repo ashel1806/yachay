@@ -16,7 +16,6 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-<<<<<<< HEAD
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
@@ -25,13 +24,6 @@ app.use('/api/course', courseRoute);
 app.use('/api/enroll', enrollRoute);
 
 app.use(errorHandler);
-=======
-const PORT = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-  res.send('Hello World from docker!!');
-});
->>>>>>> c1994a3efc3eadfe1e12e8e1a10092e0a5bc3b46
 
 const start = async () => {
   await connectToDatabase();

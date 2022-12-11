@@ -17,8 +17,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    environment:
-      PORT: 3000
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
