@@ -6,8 +6,8 @@
   "homepage": "https://github.com/ashel1806/yachay/tree/main/Desarrollo/OCS/Fuentes/frontend",
   "engines": {
     "node": ">=16.13.0",
-    "yarn": ">=1.22.19",
-    "npm": "please-use-yarn"
+    "yarn": ">=1.22.10",
+    "npm": ">= 8.1.0"
   },
   "scripts": {
     "dev": "next dev",
