@@ -5,11 +5,16 @@ const envFilePath = `${projectDirectory}/.env.${process.env.NODE_ENV}`;
 
 require('dotenv').config({ path: envFilePath });
 
-const { MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD } = process.env;
+const { MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD, MYSQL_HOST, MYSQL_PORT } =
+  process.env;
 
-const sequelize = new Sequelize(
-  `mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@database:3306/${MYSQL_DATABASE}`
-);
+const sequelize = new Sequelize(MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD, {
+  host: MYSQL_HOST,
+  port: MYSQL_PORT,
+  ssl: process.env.NODE_ENV === 'production',
+  dialect: 'mysql',
+});
+
 
 const connectToDatabase = async () => {
   try {

@@ -5,7 +5,12 @@ export default function register() {
     <section className="flex flex-row container mx-auto h-screen items-center ">
       <div className="hidden md:inline-block">
         <div className="flex items-center justify-center mx-auto h-screen bg-gray-100 ">
-          <Image src="/images/RegisterImage.jpg" width={1000} height={1000} />
+          <Image
+            alt="register"
+            src="/images/RegisterImage.jpg"
+            width={1000}
+            height={1000}
+          />
         </div>
       </div>
 
@@ -13,7 +18,12 @@ export default function register() {
         <form>
           <div className="mx-auto h-screen bg-white  p-5 md:p-10 lg:p-15 xl:p-20  mb-4 rounded ">
             <div className="flex items-center justify-center">
-              <Image src="/images/YachayL.png" width={92} height={92} />
+              <Image
+                alt="YachayL"
+                src="/images/YachayL.png"
+                width={92}
+                height={92}
+              />
             </div>
             <div className="font-bold text-4xl">Registrarse</div>
             <div className="pt-5 grid grid-cols-2">
@@ -155,6 +165,7 @@ export default function register() {
                   <div className="flex flex-row items-center justify-center">
                     <div>
                       <Image
+                        alt="g_icon"
                         src={'/images/g_icon.svg'}
                         width={33}
                         height={33}
