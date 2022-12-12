@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import { login } from '../redux/state/authSlice';
-import { clearMessages } from '../redux/state/messageSlice';
 
 export default function Login() {
   return (
