@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import Image from 'next/image';
 import React from 'react';
 import Navbar from '../components/Navbar';
@@ -6,9 +7,10 @@ import SearchBar from '../components/Searchbar';
 export default function descriptioncourse() {
   return (
     <div>
+      <ThemeProvider enableSystem={true} attribute="class">
       <Navbar />
       <SearchBar />
-      <div className="flex flex-col container mx-auto h-screen items-center justify-center bg-gray-100">
+      <div className="flex flex-col container mx-auto h-screen items-center justify-center bg-gray-100 dark:bg-slate-800">
         <div className="grid grid-rows-2 ml-10 mt-20">
           <div>
             <div className="text-3xl mb-7 ">Mi perfil</div>
@@ -25,11 +27,11 @@ export default function descriptioncourse() {
                     />
                   </div>
                   <div className="flex flex-col container items-center justify-center">
-                    <button className="bg-white rounded-2xl text-2xl py-3 px-20  mt-5 mb-2.5 mr-20 ml-5 border border-blue-500">
+                    <button className="bg-white rounded-2xl text-2xl py-3 px-20  mt-5 mb-2.5 mr-20 ml-5 border border-blue-500 dark:bg-gray-600">
                       {' '}
                       Cambiar foto
                     </button>
-                    <button className="bg-white rounded-2xl text-2xl py-3 px-20 mb-3 mr-20 ml-5 border border-blue-500">
+                    <button className="bg-white rounded-2xl text-2xl py-3 px-20 mb-3 mr-20 ml-5 border border-blue-500 dark:bg-gray-600">
                       {' '}
                       Eliminar foto
                     </button>
@@ -52,7 +54,7 @@ export default function descriptioncourse() {
                             className="pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"
                           ></input>
                         </div>
-                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500">
+                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500 dark:bg-gray-600">
                           {' '}
                           Editar{' '}
                         </button>
@@ -67,7 +69,7 @@ export default function descriptioncourse() {
                             className="size-lg pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"
                           ></input>
                         </div>
-                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500">
+                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500 dark:bg-gray-600">
                           {' '}
                           Editar{' '}
                         </button>
@@ -83,7 +85,7 @@ export default function descriptioncourse() {
                             className="size-md pl-10 pr-20 py-3 mx-5 mb-3  rounded-xl"
                           ></input>
                         </div>
-                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500">
+                        <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-3 mr-5 border border-blue-500 dark:bg-gray-600">
                           {' '}
                           Editar{' '}
                         </button>
@@ -143,15 +145,15 @@ export default function descriptioncourse() {
                     </div>
                   </div>
                   <div className=" col-span-2 grid grid-rows-3">
-                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500">
+                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500 dark:bg-gray-600">
                       {' '}
                       Editar{' '}
                     </button>
-                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500">
+                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500 dark:bg-gray-600">
                       {' '}
                       Editar{' '}
                     </button>
-                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500">
+                    <button className="bg-white rounded-2xl text-xl py-2 px-10  mb-5 mr-5 border border-blue-500 dark:bg-gray-600">
                       {' '}
                       Editar{' '}
                     </button>
@@ -160,15 +162,15 @@ export default function descriptioncourse() {
               </div>
 
               <div className=" col-span-1 grid grid-rows-3">
-                <button className="bg-white rounded-2xl text-xl py-2 px-5   border border-blue-500">
+                <button className="bg-white rounded-2xl text-xl py-2 px-5   border border-blue-500 dark:bg-gray-600">
                   {' '}
                   Editar{' '}
                 </button>
-                <button className="bg-white rounded-2xl text-xl py-2 px-5   border border-blue-500">
+                <button className="bg-white rounded-2xl text-xl py-2 px-5   border border-blue-500 dark:bg-gray-600">
                   {' '}
                   Editar{' '}
                 </button>
-                <button className="bg-white rounded-2xl text-xl py-2 px-5  border border-blue-500">
+                <button className="bg-white rounded-2xl text-xl py-2 px-5  border border-blue-500 dark:bg-gray-600">
                   {' '}
                   Editar{' '}
                 </button>
@@ -177,6 +179,7 @@ export default function descriptioncourse() {
           </div>
         </div>
       </div>
+      </ThemeProvider>
     </div>
   );
 }
