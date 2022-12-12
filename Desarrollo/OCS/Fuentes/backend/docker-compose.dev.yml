@@ -4,8 +4,11 @@ services:
   database:
     image: mysql
     container_name: yachay-db
-    env_file:
-      - ./.env.development
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: onlycourses-test
+      MYSQL_USER: yachay-admin
+      MYSQL_PASSWORD: yachay-password
     ports:
       - 3306:3306
     volumes:

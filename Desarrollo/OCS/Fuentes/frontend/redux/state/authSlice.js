@@ -1,8 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import authService from '../../services/auth';
-import { setFields, setMessages } from './messageSlice';
+import authService from '../../lib/auth';
 
-const user = JSON.parse(sessionStorage.getItem('user'));
+let userToken = ''
+if (typeof window !== 'undefined') {
+  userToken = JSON.parse(localStorage.getItem('token'));
+}
 
 export const login = createAsyncThunk(
   'auth/login',
@@ -11,9 +13,6 @@ export const login = createAsyncThunk(
       const data = await authService.login(credentials);
       return data;
     } catch (err) {
-      const { fields, messages } = err.response.data;
-      dispatch(setMessages(messages));
-      dispatch(setFields(fields));
       return rejectWithValue(err);
     }
   }
@@ -27,9 +26,6 @@ export const register = createAsyncThunk(
 
       return res.data;
     } catch (err) {
-      const { fields, messages } = err.response.data;
-      dispatch(setMessages(messages));
-      dispatch(setFields(fields));
       return rejectWithValue(err);
     }
   }
@@ -39,9 +35,9 @@ export const logout = createAsyncThunk('auth/logout', async () => {
   await authService.logout();
 });
 
-const initialState = user
-  ? { isLogged: true, user }
-  : { isLogged: false, user: null };
+const initialState = userToken
+  ? { isLogged: true, userToken }
+  : { isLogged: false, userToken: null };
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -49,22 +45,22 @@ export const authSlice = createSlice({
   extraReducers: {
     [login.fulfilled]: (state, action) => {
       state.isLogged = true;
-      state.user = action.payload.data;
+      state.userToken = action.payload.data;
     },
     [login.rejected]: (state, action) => {
       state.isLogged = false;
-      state.user = null;
+      state.userToken = null;
     },
     [register.fulfilled]: (state, action) => {
       state.isLogged = true;
-      state.user = action.payload.user;
+      state.userToken = action.payload.userToken;
     },
     [register.rejected]: (state, action) => {
       state.isLogged = false;
     },
     [logout.fulfilled]: (state, action) => {
       state.isLogged = false;
-      state.user = null;
+      state.userToken = null;
     },
   },
 });
