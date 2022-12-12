@@ -15,7 +15,6 @@ const sequelize = new Sequelize(MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD, {
   dialect: 'mysql',
 });
 
-
 const connectToDatabase = async () => {
   try {
     await sequelize.authenticate();
