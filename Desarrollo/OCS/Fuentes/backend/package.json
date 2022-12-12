@@ -7,11 +7,12 @@
   "engines": {
     "node": ">=16.13.0",
     "yarn": ">=1.22.19",
-    "npm": "please-use-yarn"
+    "npm": ">= 8.1.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "dev": "NODE_ENV=development nodemon -L index.js",
+    "build": "NODE_ENV=production node scripts/build.js",
     "prettier": "prettier --write .",
     "lint": "eslint .",
     "commit": "yarn run lint && commit"
@@ -29,6 +30,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/prompt-cli": "^17.1.2",
+    "esbuild": "^0.16.4",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
