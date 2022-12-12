@@ -8,7 +8,7 @@ const CourseDetails = require('./CourseDetails');
 const StudentsCourses = require('./StudentsCourses');
 
 // Define the dropAllTables function
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: process.env.NODE_ENV === 'development' }).then(() => {
   console.log('Databases dropped & tables created!');
 });
 
