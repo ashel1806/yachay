@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import Courses from '../../components/Courses';
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/Navbar';
 import SearchBar from '../../components/Searchbar';
 import popularesdata from '../../utils/popularesdata';
 
