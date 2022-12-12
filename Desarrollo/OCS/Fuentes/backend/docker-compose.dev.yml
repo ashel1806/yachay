@@ -4,11 +4,8 @@ services:
   database:
     image: mysql
     container_name: yachay-db
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: onlycourses
-      MYSQL_USER: yachay-admin
-      MYSQL_PASSWORD: yachay-password
+    env_file:
+      - ./.env.development
     ports:
       - 3306:3306
     volumes:
@@ -16,20 +13,18 @@ services:
       - ./database/data:/var/lib/mysql
 
   api:
-    image: yachay-backend-dev
+    image: yachay-backend-dev-test
     build:
       context: .
       dockerfile: Dockerfile.dev
-    environment:
-      PORT: 3000
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-    container_name: yachay-backend-dev
+    container_name: yachay-backend-dev-test
     environment:
-      PORT: 3000
+      PORT: 3001
     ports:
-      - 3000:3000
+      - 3001:3001
     depends_on:
       - database
     command: bash -c 'while !</dev/tcp/database/3306; do sleep 1; done; yarn dev'

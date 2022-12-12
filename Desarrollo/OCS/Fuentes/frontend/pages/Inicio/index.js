@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import Favorite from "../../components/Favorite";
 import Navbar from "../../components/navbar";
@@ -14,6 +15,8 @@ export default function Inicio() {
     <Head>
       <title>Ayuda| Inicio</title>
       </Head>
+
+      <ThemeProvider enableSystem={true} attribute="class">
       <Navbar/>
       <SearchBar/>
       <div className='py-10 pl-72 font-bold text-4xl pt-1000'>Categorias</div>
@@ -28,6 +31,8 @@ export default function Inicio() {
                 <Favorite popular={popular} key={popular.slug}></Favorite>
               ))}
         </div>
+
+        </ThemeProvider>
       </div>
       
   )
