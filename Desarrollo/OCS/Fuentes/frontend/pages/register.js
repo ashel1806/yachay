@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function register() {
+export default function registro() {
   return (
     <section className="flex flex-row container mx-auto h-screen items-center ">
       <div className="hidden md:inline-block">
