@@ -1,14 +1,33 @@
 const express = require('express');
+require('dotenv').config();
 
 const { connectToDatabase } = require('./src/configs/database.config');
 
-const app = express();
+const {
+  authRoute,
+  userRoute,
+  courseRoute,
+  enrollRoute,
+  cartRoute,
+  itemCartRoute,
+} = require('./src/routes');
+
+const { errorHandler } = require('./src/middlewares');
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World from docker!!');
-});
+const app = express();
+
+app.use(express.json());
+
+app.use('/api/auth', authRoute);
+app.use('/api/user', userRoute);
+app.use('/api/course', courseRoute);
+app.use('/api/enroll', enrollRoute);
+app.use('/api/cart', cartRoute);
+app.use('/api/itemCart', itemCartRoute);
+
+app.use(errorHandler);
 
 const start = async () => {
   await connectToDatabase();
