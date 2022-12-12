@@ -1,14 +1,12 @@
 import Image from 'next/image';
-import React from 'react';
-import Navbar from "../../components/navbar";
-import SearchBar from "../../components/Searchbar";
-
+import Navbar from '../components/Navbar';
+import SearchBar from '../components/Searchbar';
 
 export default function descriptioncourse() {
   return (
     <div>
-      <Navbar/>
-      <SearchBar/>
+      <Navbar />
+      <SearchBar />
       <div className="flex flex-row items-center justify-end">
         <div className="flex flex-row container h-screen items-center justify-center bg-gray-100">
           <div className="grid grid-cols-2">
@@ -19,8 +17,8 @@ export default function descriptioncourse() {
               <strong>Adobe Ilustrator desde cero hasta nivel avanzado</strong>
             </div>
             <div className="col-span-2 text-lg text-gray-400 pl-6 py-3">
-              Aprende todo sobre dibujo vectorial con Illustrator y sé un experto:
-              de dibujos  simples a gráficos complejos y avanzados
+              Aprende todo sobre dibujo vectorial con Illustrator y sé un
+              experto: de dibujos simples a gráficos complejos y avanzados
             </div>
             <div className="text-sm pl-6 pt-3">
               <ul>
@@ -100,7 +98,9 @@ export default function descriptioncourse() {
               <div className=" flex flex-col bg-white rounded-lg justify-content">
                 <div className="text-2xl pl-6 pt-5">Lo que aprenderás</div>
                 <div className="text-md text-gray-400 p-8">
-                  <li>Usar las diferentes herramientas de dibujo de Illustrator</li>
+                  <li>
+                    Usar las diferentes herramientas de dibujo de Illustrator
+                  </li>
                   <li>Crear y formatear texto</li>
                   <li>Exportar gráficos para web</li>
                   <li>
@@ -108,16 +108,16 @@ export default function descriptioncourse() {
                   </li>
                   <li>Vectorizar imágenes y ajustar los vectores resultante</li>
                   <li>
-                    Aplicar transformaciones avanzadas con opciones y herramientas
-                    de distorsión
+                    Aplicar transformaciones avanzadas con opciones y
+                    herramientas de distorsión
                   </li>
                   <li>
                     Aplicar efectos dinámicos no destructivos con resultados
                     sorprendentes
                   </li>
                   <li>
-                    Dar vida a los gráficos e ilustraciones usando símbolos, motivos
-                    y pinceles
+                    Dar vida a los gráficos e ilustraciones usando símbolos,
+                    motivos y pinceles
                   </li>
                   <li>Trabajar con efectos 3D</li>
                 </div>
@@ -125,7 +125,9 @@ export default function descriptioncourse() {
             </div>
             <div className="p-5">
               <div className=" flex flex-col bg-white rounded-lg justify-content">
-                <div className="text-2xl pl-6 pt-5">¿Para quién es este curso?</div>
+                <div className="text-2xl pl-6 pt-5">
+                  ¿Para quién es este curso?
+                </div>
                 <div className="text-md text-gray-400 p-8">
                   <li>Diseñadores gráficos</li>
                   <li>Diseñadores web</li>
@@ -136,17 +138,17 @@ export default function descriptioncourse() {
                     conocimientos básicos
                   </li>
                   <li>
-                    Personas que quieran fundamentar claramente sus conocimientos
-                    previos de Illustrator
+                    Personas que quieran fundamentar claramente sus
+                    conocimientos previos de Illustrator
                   </li>
                   <li>
                     Cualquier persona que desee aprender a crear gráficos
                     vectoriales para web, impresos, video, etc.
                   </li>
                   <li>
-                    Cualquier persona que quiera dominar las herramientas y opciones
-                    de Illustrator desde sus conceptos fundamentales hasta los
-                    avanzados
+                    Cualquier persona que quiera dominar las herramientas y
+                    opciones de Illustrator desde sus conceptos fundamentales
+                    hasta los avanzados
                   </li>
                 </div>
               </div>
@@ -157,16 +159,16 @@ export default function descriptioncourse() {
                 <div className="text-2xl pb-4 ">Descripción</div>
                 <div className="text-md text-gray-400">
                   Al finalizar este curso, estarás en capacidad de crear
-                  profesionalmente gráficos vectoriales y realizar tareas avanzadas.
-                  Conocerás cómo realizar el proceso de exportación a diversos
-                  formatos así como a preparar archivos para el proceso de impresión
-                  comercial. Aprenderás también a realizar dibujo técnico preciso
-                  con la herramienta Pluma, vectorizar imágenes, usar aspectos
-                  avanzados del trabajo con Color, aplicar transformaciones
-                  avanzadas con herramientas de Deformación, generar apariencias
-                  orgánicas y realistas mediante el uso de Motivos, Pinceles,
-                  Símbolos y Objetos de Malla, crear efectos 3D, y muchas técnicas
-                  más.
+                  profesionalmente gráficos vectoriales y realizar tareas
+                  avanzadas. Conocerás cómo realizar el proceso de exportación a
+                  diversos formatos así como a preparar archivos para el proceso
+                  de impresión comercial. Aprenderás también a realizar dibujo
+                  técnico preciso con la herramienta Pluma, vectorizar imágenes,
+                  usar aspectos avanzados del trabajo con Color, aplicar
+                  transformaciones avanzadas con herramientas de Deformación,
+                  generar apariencias orgánicas y realistas mediante el uso de
+                  Motivos, Pinceles, Símbolos y Objetos de Malla, crear efectos
+                  3D, y muchas técnicas más.
                 </div>
               </div>
             </div>
@@ -175,7 +177,12 @@ export default function descriptioncourse() {
             <div className="py-8 my-8"></div>
             <div className="bg-white rounded-md px-5 pt-5 mr-4 my-4">
               <div>
-                <Image src="/images/ilustrator.png" width={1500} height={800} />
+                <Image
+                  alt="ilustrator"
+                  src="/images/ilustrator.png"
+                  width={1500}
+                  height={800}
+                />
               </div>
               <div className="pb-2 pt-6">
                 <strong className="text-4xl">69,90 S/</strong>
@@ -285,7 +292,9 @@ export default function descriptioncourse() {
                     />
                   </svg>
 
-                  <p className="pl-2 inline-block">Certificado de finalización</p>
+                  <p className="pl-2 inline-block">
+                    Certificado de finalización
+                  </p>
                 </div>
               </div>
             </div>
